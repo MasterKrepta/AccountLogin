@@ -12,7 +12,7 @@ namespace AccountLogin
             Console.WriteLine("\nEnter Name");
             string name = Console.ReadLine();
 
-            Console.WriteLine("\nEnter type: Possible Types are (Production, Office, Supervisor, Manager)");
+            Console.WriteLine("\nEnter type: (Production, Office, Supervisor, Manager)");
             string type  = Console.ReadLine().ToLower();
 
             Employee.EmployeeType empType = Employee.EmployeeType.Production;

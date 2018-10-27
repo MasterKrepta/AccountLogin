@@ -8,14 +8,12 @@ namespace AccountLogin
         static void Main(string[] args) {
 
             MainMenu menu = new MainMenu();
+            Data.LoadData();
             while (true) {
                 menu.Display();
-                menu.GetOption();
+                menu.SelectMenuOption();
             }
-            Employee e = new Employee("Frank Reynolds", Employee.EmployeeType.Manager, "Idea Man", 1000.50f);
 
-            e.GetDescription();
-            Console.ReadKey();
         }
     }
 }

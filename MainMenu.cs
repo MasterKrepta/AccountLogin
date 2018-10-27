@@ -11,12 +11,13 @@ namespace AccountLogin
             Console.Clear();
             Console.WriteLine("\n1) Create Employee");
             Console.WriteLine("\n2) List Employees");
-            Console.WriteLine("\n3) Quit");
-            Console.WriteLine("\nSelect A Menu Option: => #");
+            Console.WriteLine("\n3) Change Employees");
+            Console.WriteLine("\n4) Quit");
+            Console.WriteLine("\nSelect A Menu Option: ");
 
         }
 
-        public void GetOption() {
+        public void SelectMenuOption() {
             string input = Console.ReadLine().ToLower();
 
             switch (input) {
@@ -36,7 +37,12 @@ namespace AccountLogin
                     Console.ReadKey();
                     break;
                 case "3":
+                    Employee.ChangeEmployee();
+                    Console.ReadKey();
+                    break;
+                case "4":
                     Console.WriteLine("\nGood Bye");
+                    Data.SaveData();
                     Console.ReadKey();
                     Environment.Exit(0);
                     break;
