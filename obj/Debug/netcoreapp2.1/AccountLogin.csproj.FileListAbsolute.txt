@@ -1,0 +1,11 @@
+C:\Users\brian\Documents\Visual Studio 2017\Projects\AccountLogin\AccountLogin\bin\Debug\netcoreapp2.1\AccountLogin.deps.json
+C:\Users\brian\Documents\Visual Studio 2017\Projects\AccountLogin\AccountLogin\bin\Debug\netcoreapp2.1\AccountLogin.runtimeconfig.json
+C:\Users\brian\Documents\Visual Studio 2017\Projects\AccountLogin\AccountLogin\bin\Debug\netcoreapp2.1\AccountLogin.runtimeconfig.dev.json
+C:\Users\brian\Documents\Visual Studio 2017\Projects\AccountLogin\AccountLogin\bin\Debug\netcoreapp2.1\AccountLogin.dll
+C:\Users\brian\Documents\Visual Studio 2017\Projects\AccountLogin\AccountLogin\bin\Debug\netcoreapp2.1\AccountLogin.pdb
+C:\Users\brian\Documents\Visual Studio 2017\Projects\AccountLogin\AccountLogin\obj\Debug\netcoreapp2.1\AccountLogin.csproj.CoreCompileInputs.cache
+C:\Users\brian\Documents\Visual Studio 2017\Projects\AccountLogin\AccountLogin\obj\Debug\netcoreapp2.1\AccountLogin.AssemblyInfoInputs.cache
+C:\Users\brian\Documents\Visual Studio 2017\Projects\AccountLogin\AccountLogin\obj\Debug\netcoreapp2.1\AccountLogin.AssemblyInfo.cs
+C:\Users\brian\Documents\Visual Studio 2017\Projects\AccountLogin\AccountLogin\obj\Debug\netcoreapp2.1\AccountLogin.dll
+C:\Users\brian\Documents\Visual Studio 2017\Projects\AccountLogin\AccountLogin\obj\Debug\netcoreapp2.1\AccountLogin.pdb
+C:\Users\brian\Documents\Visual Studio 2017\Projects\AccountLogin\AccountLogin\obj\Debug\netcoreapp2.1\AccountLogin.csprojAssemblyReference.cache
