@@ -50,7 +50,7 @@ namespace AccountLogin
                     float rate = float.Parse(values[3]);
 
                     Employee e = new Employee(name, type, title, rate);
-                    e.GetDescription();
+                    e.GetEmployeeDescription();
                     
                 }
                 Console.WriteLine("Data Loaded");

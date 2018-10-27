@@ -50,8 +50,6 @@ namespace AccountLogin
             Console.WriteLine("\nEnter Pay Rate");
             float rate = float.Parse( Console.ReadLine());
 
-            
-            //TODO Add employee to a data file location
             return new Employee(name, empType, title, rate);
         }
             

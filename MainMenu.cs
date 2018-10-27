@@ -30,18 +30,19 @@ namespace AccountLogin
                 case "2":
                     Console.WriteLine("\n-------------------------- All Employees ------------------------");
                     foreach (Employee employee in Data.employees) {
-                        employee.GetDescription();
+                        employee.GetEmployeeDescription();
                         Console.WriteLine();
                     }
                     Console.WriteLine(Data.employees.Count + " Total Employees ");
                     Console.ReadKey();
                     break;
                 case "3":
-                    Employee.ChangeEmployee();
+                    ChangeEmployee.DisplayChangeMenu();
                     Console.ReadKey();
                     break;
                 case "4":
                     Console.WriteLine("\nGood Bye");
+                    
                     Data.SaveData();
                     Console.ReadKey();
                     Environment.Exit(0);
