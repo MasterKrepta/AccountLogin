@@ -4,9 +4,9 @@ using System.Text;
 
 namespace AccountLogin
 {
-    class CreateEmployee
+    static class CreateEmployee
     {
-        public Employee Create() {
+        public static Employee Create() {
             Console.WriteLine("\n-------------------------- Create Employee ------------------------");
 
             Console.WriteLine("\nEnter Name");

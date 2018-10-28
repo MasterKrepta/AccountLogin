@@ -9,9 +9,9 @@ namespace AccountLogin
 
             MainMenu menu = new MainMenu();
             Data.LoadData();
+            Console.ReadKey();
             while (true) {
                 menu.Display();
-                menu.SelectMenuOption();
             }
 
         }

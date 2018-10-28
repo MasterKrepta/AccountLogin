@@ -9,38 +9,37 @@ namespace AccountLogin
 
         public void Display() {
             Console.Clear();
+            //TODO organize these more logicially - move employee stuff to a seperate menu option
             Console.WriteLine("\n1) Create Employee");
             Console.WriteLine("\n2) List Employees");
             Console.WriteLine("\n3) Change Employees");
-            Console.WriteLine("\n4) Quit");
+            Console.WriteLine("\n4) Inventroy Manager");
+            Console.WriteLine("\nQ) Quit");
             Console.WriteLine("\nSelect A Menu Option: ");
-
+            SelectMenuOption();
         }
 
-        public void SelectMenuOption() {
+        void SelectMenuOption() {
             string input = Console.ReadLine().ToLower();
 
             switch (input) {
                 case "1":
-                    CreateEmployee cE = new CreateEmployee();
-                    Employee e = cE.Create();
+                    CreateEmployee.Create();
                     Console.WriteLine("\nNew employee created.");
                     Console.ReadKey();
                     break;
                 case "2":
-                    Console.WriteLine("\n-------------------------- All Employees ------------------------");
-                    foreach (Employee employee in Data.employees) {
-                        employee.GetEmployeeDescription();
-                        Console.WriteLine();
-                    }
-                    Console.WriteLine(Data.employees.Count + " Total Employees ");
-                    Console.ReadKey();
+                    ListAllEmployees();
                     break;
                 case "3":
                     ChangeEmployee.DisplayChangeMenu();
                     Console.ReadKey();
                     break;
                 case "4":
+                    InventorySystem.Menu();
+                    Console.ReadKey();
+                    break;
+                case "q":
                     Console.WriteLine("\nGood Bye");
                     
                     Data.SaveData();
@@ -48,6 +47,16 @@ namespace AccountLogin
                     Environment.Exit(0);
                     break;
             }
+        }
+
+        private static void ListAllEmployees() {
+            Console.WriteLine("\n-------------------------- All Employees ------------------------");
+            foreach (Employee employee in Data.Employees) {
+                employee.GetEmployeeDescription();
+                Console.WriteLine();
+            }
+            Console.WriteLine(Data.Employees.Count + " Total Employees ");
+            Console.ReadKey();
         }
     }
 }

@@ -9,7 +9,7 @@ namespace AccountLogin
     {
         public static void DisplayChangeMenu() {
             //TODO we need to get the employee once to prevent having to enter for each option
-            if (Data.employees.Count <= 0) {
+            if (Data.Employees.Count <= 0) {
                 return;
             }
 
@@ -37,7 +37,7 @@ namespace AccountLogin
         }
 
         private static Employee FindEmployee(string name) {
-            foreach (Employee e in Data.employees) {
+            foreach (Employee e in Data.Employees) {
                 if (e.Name.ToLower() == name.ToLower())
                     return e;
             }

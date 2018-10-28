@@ -1,1 +1,2 @@
-﻿
+Frank Reynolds,Manager,Asshole,25.75
+Bruce Craddock,Manger,Psi Wilson,30

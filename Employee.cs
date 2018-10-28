@@ -25,7 +25,7 @@ namespace AccountLogin
             this.Type = type;
             this.JobTitle = title;
             this.PayRate = rate;
-            Data.employees.Add(this);
+            Data.Employees.Add(this);
             //?Do we need to save here? I Am already saving at applicaiton close for safty.. this might be redudundent
             //Data.SaveData();
         }
@@ -38,7 +38,5 @@ namespace AccountLogin
             Console.WriteLine("Pay Rate: $" + PayRate + " per hour");
         }
 
-        //TODO all the Change functions need to be moved to another script
-        
     }
 }
