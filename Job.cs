@@ -33,7 +33,7 @@ namespace AccountLogin
             this.Qty = qty;
             this.StartDate = start;
             this.EndDate = end;
-            this.RunTime = (EndDate.Day - StartDate.Day);
+            this.RunTime = (StartDate.Day + EndDate.Day);
             this.Machine = machine;
 
         }

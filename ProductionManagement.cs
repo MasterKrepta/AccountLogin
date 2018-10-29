@@ -12,7 +12,7 @@ namespace AccountLogin
                 Console.Clear();
                 Console.WriteLine("\n-------------------------- Production Management ------------------------");
                 Console.WriteLine("\n1) View Job Orders");
-   
+                Console.WriteLine("\n2) Create Job");
                 Console.WriteLine("\nQ) Quit");
                 Console.WriteLine("\nSelect A Menu Option: ");
                 SelectMenuOption(input = Console.ReadLine().ToLower());
@@ -24,10 +24,15 @@ namespace AccountLogin
 
             switch (input) {
                 case "1":
-           
+                    ListAllJobs();
                     Console.ReadKey();
                     break;
-   
+                case "2":
+                    Job newJob =  CreateJob.Create();
+                    Data.Jobs.Add(newJob);
+                    Console.WriteLine("\nNew Job created.");
+                    Console.ReadKey();
+                    break;
                 case "q":
                     MainMenu.DisplayMenu();
                     break;

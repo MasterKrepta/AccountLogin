@@ -10,11 +10,14 @@ namespace AccountLogin
         public static List<Employee> Employees = new List<Employee>();
         public static List<Product> Products = new List<Product>();
         public static List<Job> Jobs = new List<Job>();
+
+        public enum ProdMachines { Borgi2, Borgi3, Borgi4A, Borgi4B, Borgi4C, Borgi4D, Borgi5, Borgi6};
         
         public static void SaveData() {
             //TODO Set up proper data paths for this instead of copying it into the debug
             SaveEmployeeData();
             SaveInventoryData();
+            SaveJobData();
             Console.WriteLine("File Saved");
             Console.ReadKey();
         }

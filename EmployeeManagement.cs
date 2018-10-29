@@ -27,8 +27,9 @@ namespace AccountLogin
 
             switch (input) {
                 case "1":
-                    CreateEmployee.Create();
+                    Employee newEmployee = CreateEmployee.Create();
                     Console.WriteLine("\nNew employee created.");
+                    Data.Employees.Add(newEmployee);
                     Console.ReadKey();
                     break;
                 case "2":

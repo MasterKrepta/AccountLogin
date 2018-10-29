@@ -32,6 +32,10 @@ namespace AccountLogin
                     InventorySystem.DisplayMenu();
                     Console.ReadKey();
                     break;
+                case "3":
+                    ProductionManagement.DisplayMenu();
+                    Console.ReadKey();
+                    break;
                 case "q":
                     Console.WriteLine("\nGood Bye");
                     
