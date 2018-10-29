@@ -11,3 +11,4 @@ C:\Users\brian\Documents\Visual Studio 2017\Projects\AccountLogin\AccountLogin\o
 C:\Users\brian\Documents\Visual Studio 2017\Projects\AccountLogin\AccountLogin\obj\Debug\netcoreapp2.1\AccountLogin.csprojAssemblyReference.cache
 C:\Users\brian\Documents\Visual Studio 2017\Projects\AccountLogin\AccountLogin\bin\Debug\netcoreapp2.1\DataStorage.txt
 C:\Users\brian\Documents\Visual Studio 2017\Projects\AccountLogin\AccountLogin\bin\Debug\netcoreapp2.1\InventoryStorage.txt
+C:\Users\brian\Documents\Visual Studio 2017\Projects\AccountLogin\AccountLogin\bin\Debug\netcoreapp2.1\JobStorage.txt

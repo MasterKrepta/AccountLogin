@@ -30,7 +30,7 @@ namespace AccountLogin
             //Data.SaveData();
         }
 
-        public void GetEmployeeDescription() {
+        public void Description() {
             Console.WriteLine("Employee Name: " + Name);
             Console.WriteLine("-----------------------");
             Console.WriteLine("Employee Type: " + Type);

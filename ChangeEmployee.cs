@@ -60,8 +60,7 @@ namespace AccountLogin
                     Console.ReadKey();
                     break;
                 case "4":
-                    MainMenu menu = new MainMenu();
-                    menu.Display();
+                    MainMenu.DisplayMenu();
                     break;
             }
         }
@@ -80,7 +79,7 @@ namespace AccountLogin
                     e.JobTitle = newJobTitle;
                     Console.WriteLine("\nNew Title Accepted");
                     Console.WriteLine();
-                    e.GetEmployeeDescription();
+                    e.Description();
 
                 }
 

@@ -4,20 +4,22 @@ using System.Text;
 
 namespace AccountLogin
 {
-    static class  MainMenu
+    static class EmployeeManagement
     {
-
         public static void DisplayMenu() {
             string input = "";
             while (input.ToLower() != "q") {
                 Console.Clear();
-                Console.WriteLine("\n1) Employee Manager");
-                Console.WriteLine("\n2) Inventroy Manager");
-                Console.WriteLine("\n3) Production Manager");
+                Console.WriteLine("\n-------------------------- Employee Management ------------------------");
+                Console.WriteLine("\n1) Create Employee");
+                Console.WriteLine("\n2) List Employees");
+                Console.WriteLine("\n3) Change Employees");
                 Console.WriteLine("\nQ) Quit");
                 Console.WriteLine("\nSelect A Menu Option: ");
+                
                 SelectMenuOption(input = Console.ReadLine().ToLower());
             }
+            
         }
 
         static void SelectMenuOption(string input) {
@@ -25,19 +27,20 @@ namespace AccountLogin
 
             switch (input) {
                 case "1":
-                    EmployeeManagement.DisplayMenu();
+                    CreateEmployee.Create();
+                    Console.WriteLine("\nNew employee created.");
                     Console.ReadKey();
                     break;
                 case "2":
-                    InventorySystem.DisplayMenu();
+                    ListAllEmployees();
+                    break;
+                case "3":
+                    ChangeEmployee.DisplayChangeMenu();
                     Console.ReadKey();
                     break;
+                
                 case "q":
-                    Console.WriteLine("\nGood Bye");
-                    
-                    Data.SaveData();
-                    Console.ReadKey();
-                    Environment.Exit(0);
+                    MainMenu.DisplayMenu();
                     break;
             }
         }

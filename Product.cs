@@ -28,7 +28,7 @@ namespace AccountLogin
             this.QtyOnHand = qty;
         }
 
-        public void GetProductDescription() {
+        public void Description() {
             Console.WriteLine("Product Name: " + Name);
             Console.WriteLine("-----------------------");
             Console.WriteLine("Product Location: " + Location);

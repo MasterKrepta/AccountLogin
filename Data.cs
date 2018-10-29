@@ -9,6 +9,7 @@ namespace AccountLogin
     {
         public static List<Employee> Employees = new List<Employee>();
         public static List<Product> Products = new List<Product>();
+        public static List<Job> Jobs = new List<Job>();
         
         public static void SaveData() {
             //TODO Set up proper data paths for this instead of copying it into the debug
@@ -30,6 +31,33 @@ namespace AccountLogin
                             + p.Cost.ToString().ToLower() + ","
                             + p.SalePrice.ToString().ToLower() +","
                             + p.QtyOnHand.ToString().ToLower();
+
+                        outputFile.WriteLine(line);
+                    }
+                    outputFile.Close();
+                }
+
+            }
+            catch (Exception e) {
+                Console.WriteLine(e.Message);
+                throw;
+            }
+        }
+        private static void SaveJobData() {
+            string path = @"JobStorage.txt";
+            string text = System.IO.File.ReadAllText(path);
+            try {
+                using (StreamWriter outputFile = new StreamWriter(path)) {
+                    foreach (Job j in Jobs) {
+
+                        string line = "";
+                        line += j.JobNum + ","
+                            + j.Product + ","
+                            + j.Qty + ","
+                            + j.StartDate + ","
+                            + j.EndDate + ","
+                            + j.RunTime + ","
+                            +j.Machine;
 
                         outputFile.WriteLine(line);
                     }
@@ -70,7 +98,7 @@ namespace AccountLogin
         public static void LoadData() {
             LoadEmployeeData();
             LoadInventoryData();
-
+            LoadJobData();
         }
 
         private static void LoadInventoryData() {
@@ -131,6 +159,41 @@ namespace AccountLogin
 
                 }
                 Console.WriteLine("Data Loaded with " + Employees.Count + " Employees");
+            }
+        }
+        private static void LoadJobData() {
+            Jobs.Clear();
+            using (StreamReader sr = new StreamReader("JobStorage.txt")) {
+
+                string line;
+
+                while ((line = sr.ReadLine()) != null) {
+
+                    //line += j.JobNum + ","
+                    // + j.Qty + ","
+                    // + j.StartDate + ","
+                    // + j.EndDate + ","
+                    // + j.RunTime + ","
+                    // + j.Machine;
+
+                    string[] values = line.Split(',');
+                    int num = int.Parse( values[0]);
+                    string product = values[1];
+                    int qty = int.Parse(values[2]);
+                    DateTime start = DateTime.Parse(values[3]);
+                    DateTime end = DateTime.Parse(values[4]);
+                    string machine = values[6];
+                    
+
+                    Job j = new Job(num,product, qty,start,end,machine);
+                    if (!Jobs.Contains(j)) {
+                        Jobs.Add(j);
+                    }
+
+                    //e.GetEmployeeDescription();
+
+                }
+                Console.WriteLine("Data Loaded with " + Jobs.Count + " Jobs");
             }
         }
 
