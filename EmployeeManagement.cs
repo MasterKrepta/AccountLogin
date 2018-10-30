@@ -19,7 +19,6 @@ namespace AccountLogin
                 
                 SelectMenuOption(input = Console.ReadLine().ToLower());
             }
-            
         }
 
         static void SelectMenuOption(string input) {

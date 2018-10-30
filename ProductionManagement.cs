@@ -13,6 +13,8 @@ namespace AccountLogin
                 Console.WriteLine("\n-------------------------- Production Management ------------------------");
                 Console.WriteLine("\n1) View Job Orders");
                 Console.WriteLine("\n2) Create Job");
+                Console.WriteLine("\n3) Complete Job");
+                Console.WriteLine("\n4) View Profits");
                 Console.WriteLine("\nQ) Quit");
                 Console.WriteLine("\nSelect A Menu Option: ");
                 SelectMenuOption(input = Console.ReadLine().ToLower());
@@ -31,6 +33,14 @@ namespace AccountLogin
                     Job newJob =  CreateJob.Create();
                     Data.Jobs.Add(newJob);
                     Console.WriteLine("\nNew Job created.");
+                    Console.ReadKey();
+                    break;
+                case "3":
+                    ProfitManager.FinalizeJob();
+                    Console.ReadKey();
+                    break;
+                case "4":
+                    ProfitManager.CalculateProfit();
                     Console.ReadKey();
                     break;
                 case "q":

@@ -26,6 +26,12 @@ namespace AccountLogin
             this.Cost = cost;
             this.SalePrice = salePrice;
             this.QtyOnHand = qty;
+            if (!Data.Products.Contains(this)) {
+                Data.Products.Add(this);
+            }
+            //if (!Data.Merchandise.ContainsKey(this.Name)) {
+            //    Data.Merchandise.Add(this.Name, this);
+            //}
         }
 
         public void Description() {

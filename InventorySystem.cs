@@ -59,8 +59,22 @@ namespace AccountLogin
             foreach (Product p in Data.Products) {
                 p.Description();
                 Console.WriteLine();
+                //if (!Data.Merchandise.ContainsKey(p.Name)) {
+                //    Data.Merchandise.Add(p.Name, p);
+                //    Console.WriteLine("\n" + p.Name + " Added.");
+                //}
             }
             Console.WriteLine(Data.Products.Count + " Total Products ");
+        }
+
+        public static Product FindProduct(string value) {
+            
+            foreach (Product p in Data.Products) {
+                if (p.Name == value.ToUpper()) {
+                    return p;
+                }
+            }
+            return null;
         }
     }
 }
