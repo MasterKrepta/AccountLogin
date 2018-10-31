@@ -5,7 +5,6 @@ using System.Text;
 namespace AccountLogin
 {
     static class InventorySystem {
-
         public static void DisplayMenu(){
             string input = "";
             while (input.ToLower() != "q") {
@@ -22,8 +21,6 @@ namespace AccountLogin
         }
 
          static void SelectMenuOption(string input) {
-            
-
             switch (input) {
                 case "1":
                     Console.WriteLine("\n-------------------------- Query Inventory ------------------------");
@@ -59,16 +56,11 @@ namespace AccountLogin
             foreach (Product p in Data.Products) {
                 p.Description();
                 Console.WriteLine();
-                //if (!Data.Merchandise.ContainsKey(p.Name)) {
-                //    Data.Merchandise.Add(p.Name, p);
-                //    Console.WriteLine("\n" + p.Name + " Added.");
-                //}
             }
             Console.WriteLine(Data.Products.Count + " Total Products ");
         }
 
         public static Product FindProduct(string value) {
-            
             foreach (Product p in Data.Products) {
                 if (p.Name == value.ToUpper()) {
                     return p;

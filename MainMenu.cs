@@ -6,7 +6,6 @@ namespace AccountLogin
 {
     static class  MainMenu
     {
-
         public static void DisplayMenu() {
             string input = "";
             while (input.ToLower() != "q") {
@@ -21,8 +20,6 @@ namespace AccountLogin
         }
 
         static void SelectMenuOption(string input) {
-            
-
             switch (input) {
                 case "1":
                     EmployeeManagement.DisplayMenu();
@@ -38,7 +35,6 @@ namespace AccountLogin
                     break;
                 case "q":
                     Console.WriteLine("\nGood Bye");
-                    
                     Data.SaveData();
                     Console.ReadKey();
                     Environment.Exit(0);
